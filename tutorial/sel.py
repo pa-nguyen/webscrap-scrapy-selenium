@@ -72,9 +72,9 @@ for i in fuel:
             print('ASSERTION ERROR')
             print(len(stations), len(prices), len(times), len(gratis), len(address))
 
-# df = pd.DataFrame({'Fuel': fuels, 'Chain': chains, 'Station': stations, 'Address': addresses, 'Time': times,
-#                    'Price': prices, 'Gratis': gratises})
-# df.to_csv('C:/Users/phuon/Downloads/stations2.csv', index=False)
+df = pd.DataFrame({'Fuel': fuels, 'Chain': chains, 'Station': stations, 'Address': addresses, 'Time': times,
+                   'Price': prices, 'Gratis': gratises})
+df.to_csv('./stations2.csv', index=False)
 
 end = time.time()
 
