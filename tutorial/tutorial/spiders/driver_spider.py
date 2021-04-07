@@ -13,10 +13,10 @@ class DriverSpider(scrapy.Spider):
 
     def parse(self, response):
         yield response.request.meta
-        # fuel, chain = self.options_scrape("brandstofselect"), self.options_scrape("ketenselect")
-        # for i in fuel:
-        #     for j in chain:
-        # yield SeleniumRequest(url=response.url, callback=self.process_webdriver)
+        fuel, chain = self.options_scrape("brandstofselect"), self.options_scrape("ketenselect")
+        for i in fuel:
+            for j in chain:
+        yield SeleniumRequest(url=response.url, callback=self.process_webdriver)
 
     def process_webdriver(self, driver):
         results = driver.find_element_by_xpath("//div[@id = 'results']")
