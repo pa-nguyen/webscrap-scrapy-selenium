@@ -18,9 +18,9 @@ class DriverSpider(scrapy.Spider):
             for j in chain:
         yield SeleniumRequest(url=response.url, callback=self.process_webdriver)
 
-    def process_webdriver(self, driver):
-        results = driver.find_element_by_xpath("//div[@id = 'results']")
-        yield {
-            'text': results.text,
-        }
+    # def process_webdriver(self, driver):
+    #     results = driver.find_element_by_xpath("//div[@id = 'results']")
+    #     yield {
+    #         'text': results.text,
+    #     }
 
